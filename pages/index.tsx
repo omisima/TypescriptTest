@@ -28,12 +28,32 @@ const IndexPage: NextPage<Props> = ({ initialImageUrl }) => {
   };
 
   // ❸ ローディング中でなければ、画像を表示する
+  //return (
+  //  <div className={styles.page}>
+  //    <button onClick={handleClick}>他のにゃんこも見る</button>
+  //    <div className={styles.frame}>
+  //      {loading || <img src={imageUrl} /> }
+  //      </div>
+  //  </div>
+  //);
+
   return (
-    <div className={styles.page}>
-      <button onClick={handleClick}>他のにゃんこも見る</button>
+    <div>
+      <button
+        onClick={handleClick}
+        style={{
+          backgroundColor: "#319795",
+          border: "none",
+          borderRadius: "4px",
+          color: "white",
+          padding: "4px 8px",
+        }}
+      >
+        きょうのにゃんこ🐱
+      </button>
       <div className={styles.frame}>
         {loading || <img src={imageUrl} /> }
-        </div>
+      </div>
     </div>
   );
 };
